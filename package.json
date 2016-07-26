@@ -1,6 +1,6 @@
 {
   "name": "@spudly/eslint-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shareable ESLint config with all the best settings.",
   "main": "index.js",
   "author": "Stephen Sorensen <shuoink@gmail.com>",
