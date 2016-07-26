@@ -1,0 +1,1 @@
+# @spudly/eslint-config
