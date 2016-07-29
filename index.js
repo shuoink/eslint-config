@@ -25,6 +25,7 @@ module.exports = {
     'no-use-before-define': [ERROR, 'nofunc'],
     'arrow-body-style': [OFF, 'always'],
     semi: [WARNING, 'always'],
+    'react/display-name': [WARNING, {ignoreTranspilerName: true}],
     'react/jsx-no-duplicate-props': [ERROR],
     'react/no-multi-comp': [WARNING, {ignoreStateless: true}],
     'react/no-string-refs': [ERROR],
