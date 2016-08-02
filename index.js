@@ -38,6 +38,11 @@ module.exports = {
     'lodash-fp/prefer-constant': OFF,
     'ava/no-todo-test': OFF,
     'ava/test-title': [WARNING, 'always'],
-    'ava/prefer-power-assert': OFF, // TODO: enable when eslint-plugin-ava#118 lands
+    'react/require-extension': OFF,
+    'react/jsx-filename-extension': OFF,
+
+    // TODO: enable when eslint-plugin-ava#118 lands
+    // Update 2016-08-02: pull request merged but not released as of v2.5.0
+    'ava/prefer-power-assert': OFF,
   },
 };
