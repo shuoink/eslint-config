@@ -28,8 +28,6 @@ export class Amet extends React.Component {
   }
 }
 
-export const Adipiscing = () => (
-  <div />
-);
+export const Adipiscing = () => <div />;
 
 Adipiscing.displayName = 'Adipiscing';

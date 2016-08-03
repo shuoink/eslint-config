@@ -1,48 +1,37 @@
-const OFF = 0;
-const WARNING = 1;
-const ERROR = 2;
+const coreRules = require('./rules/core');
+const avaRules = require('./rules/ava');
+const importRules = require('./rules/import');
+const reactRules = require('./rules/react');
+const jsxAccessibilityRules = require('./rules/jsx-a11y');
+const lodashFpRules = require('./rules/lodash-fp');
 
-module.exports = {
+const config = {
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 7,
+    sourceType: 'module',
+    ecmaFeatures: {jsx: true},
+  },
   env: {
+    node: true,
     browser: true,
     es6: true,
   },
-  extends: [
-    'airbnb',
-    'plugin:ava/recommended',
-    'plugin:lodash-fp/recommended',
-  ],
   plugins: [
     'lodash-fp',
     'ava',
+    'import',
+    'react',
+    'jsx-a11y',
   ],
-  rules: {
-    indent: [WARNING, 2, {SwitchCase: 1}],
-    'max-len': [WARNING, 100, 4],
-    'no-unexpected-multiline': [WARNING],
-    'object-curly-spacing': [WARNING, 'never'],
-    'no-use-before-define': [ERROR, 'nofunc'],
-    'arrow-body-style': [OFF, 'always'],
-    semi: [WARNING, 'always'],
-    'react/display-name': [WARNING, {ignoreTranspilerName: true}],
-    'react/jsx-no-duplicate-props': [ERROR],
-    'react/no-multi-comp': [WARNING, {ignoreStateless: true}],
-    'react/no-string-refs': [ERROR],
-    'no-underscore-dangle': [OFF],
-    'react/sort-comp': [WARNING],
-    'lodash-fp/consistent-compose': WARNING,
-    'lodash-fp/no-for-each': [WARNING, {noNative: false}],
-    'lodash-fp/preferred-alias': WARNING,
-    'ava/max-asserts': OFF,
-    'lodash-fp/prefer-constant': OFF,
-    'ava/no-todo-test': OFF,
-    'ava/test-title': [WARNING, 'always'],
-    'react/require-extension': OFF,
-    'react/jsx-filename-extension': OFF,
-
-    // TODO: enable when eslint-plugin-ava#118 lands
-    // Update 2016-08-02: pull request merged but not released as of v2.5.0
-    'ava/prefer-power-assert': OFF,
-  },
+  rules: Object.assign({},
+    coreRules,
+    avaRules,
+    importRules,
+    jsxAccessibilityRules,
+    lodashFpRules,
+    reactRules
+  ),
 };
+
+module.exports = config;
