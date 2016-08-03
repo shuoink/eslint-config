@@ -139,8 +139,8 @@ module.exports = {
   'no-redeclare': ERROR,
   'no-regex-spaces': ERROR,
   'no-restricted-globals': [ERROR, '$', '_'],
-  'no-restricted-imports': [WARNING, ...MODULE_BLACKLIST],
-  'no-restricted-modules': [ERROR, ...MODULE_BLACKLIST],
+  'no-restricted-imports': [WARNING].concat(MODULE_BLACKLIST),
+  'no-restricted-modules': [ERROR].concat(MODULE_BLACKLIST),
   'no-restricted-syntax': OFF, // other rules take care of these
   'no-return-assign': ERROR,
   'no-script-url': ERROR,
