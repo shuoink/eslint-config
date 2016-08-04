@@ -1,26 +1,27 @@
-const OFF = 0;
-const WARNING = 1;
-const ERROR = 2;
-
 module.exports = {
-  'lodash-fp/consistent-compose': WARNING,
-  'lodash-fp/consistent-name': [ERROR, '_'],
-  'lodash-fp/no-argumentless-calls': ERROR,
-  'lodash-fp/no-chain': ERROR,
-  'lodash-fp/no-extraneous-args': ERROR,
-  'lodash-fp/no-extraneous-function-wrapping': ERROR,
-  'lodash-fp/no-extraneous-iteratee-args': ERROR,
-  'lodash-fp/no-for-each': [WARNING, {noNative: false}],
-  'lodash-fp/no-partial-of-curried': ERROR,
-  'lodash-fp/no-single-composition': ERROR,
-  'lodash-fp/no-submodule-destructuring': ERROR,
-  'lodash-fp/no-unused-result': ERROR,
-  'lodash-fp/prefer-compact': ERROR,
-  'lodash-fp/prefer-composition-grouping': ERROR,
-  'lodash-fp/prefer-constant': OFF, // makes code harder to read
-  'lodash-fp/prefer-flat-map': ERROR,
-  'lodash-fp/prefer-get': ERROR,
-  'lodash-fp/prefer-identity': [ERROR, {arrowFunctions: false}],
-  'lodash-fp/preferred-alias': WARNING,
-  'lodash-fp/use-fp': ERROR,
+  plugins: [
+    'lodash-fp',
+  ],
+  rules: {
+    'lodash-fp/consistent-compose': 'warn',
+    'lodash-fp/consistent-name': ['error', '_'],
+    'lodash-fp/no-argumentless-calls': 'error',
+    'lodash-fp/no-chain': 'error',
+    'lodash-fp/no-extraneous-args': 'error',
+    'lodash-fp/no-extraneous-function-wrapping': 'error',
+    'lodash-fp/no-extraneous-iteratee-args': 'error',
+    'lodash-fp/no-for-each': ['warn', {noNative: false}],
+    'lodash-fp/no-partial-of-curried': 'error',
+    'lodash-fp/no-single-composition': 'error',
+    'lodash-fp/no-submodule-destructuring': 'error',
+    'lodash-fp/no-unused-result': 'error',
+    'lodash-fp/prefer-compact': 'error',
+    'lodash-fp/prefer-composition-grouping': 'error',
+    'lodash-fp/prefer-constant': 'off', // makes code harder to read
+    'lodash-fp/prefer-flat-map': 'error',
+    'lodash-fp/prefer-get': 'error',
+    'lodash-fp/prefer-identity': ['error', {arrowFunctions: false}],
+    'lodash-fp/preferred-alias': 'warn',
+    'lodash-fp/use-fp': 'error',
+  },
 };

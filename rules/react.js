@@ -1,56 +1,56 @@
-const OFF = 0;
-const WARNING = 1;
-const ERROR = 2;
-
 module.exports = {
-  'react/display-name': [WARNING, {ignoreTranspilerName: true}],
-  'react/forbid-prop-types': [ERROR, {forbid: ['any', 'array', 'object']}],
-  'react/jsx-boolean-value': [ERROR, 'never'],
-  'react/jsx-closing-bracket-location': [ERROR, 'line-aligned'],
-  'react/jsx-curly-spacing': [ERROR, 'never', {allowMultiline: true}],
-  'react/jsx-equals-spacing': [ERROR, 'never'],
-  'react/jsx-filename-extension': [WARNING, {extensions: ['.js']}],
-  'react/jsx-first-prop-new-line': [ERROR, 'multiline'],
-  'react/jsx-handler-names': [ERROR, {eventHandlerPrefix: '_handle', eventHandlerPropPrefix: 'on'}],
-  'react/jsx-indent-props': [ERROR, 2],
-  'react/jsx-indent': [ERROR, 2],
-  'react/jsx-key': ERROR,
-  'react/jsx-max-props-per-line': OFF, // max-len is enough for me
-  'react/jsx-no-bind': [ERROR, {ignoreRefs: true}],
-  'react/jsx-no-comment-textnodes': ERROR,
-  'react/jsx-no-duplicate-props': [ERROR, {ignoreCase: false}],
-  'react/jsx-no-literals': OFF, // I dont like this rule.
-  'react/jsx-no-target-blank': ERROR,
-  'react/jsx-no-undef': ERROR,
-  'react/jsx-pascal-case': ERROR,
-  'react/jsx-sort-prop-types': OFF, // deprecated in favor of react/jsx-sort-props
-  'react/jsx-sort-props': [WARNING, {ignoreCase: true}],
-  'react/jsx-space-before-closing': [2, 'always'],
-  'react/jsx-uses-react': ERROR,
-  'react/jsx-uses-vars': ERROR,
-  'react/jsx-wrap-multilines': ERROR,
-  'react/no-comment-textnodes': OFF, // deprecated
-  'react/no-danger': WARNING,
-  'react/no-deprecated': ERROR,
-  'react/no-did-mount-set-state': OFF, // need setState in componentDidMount for client-side-only logic
-  'react/no-did-update-set-state': ERROR,
-  'react/no-direct-mutation-state': ERROR,
-  'react/no-find-dom-node': ERROR,
-  'react/no-is-mounted': ERROR,
-  'react/no-multi-comp': [WARNING, {ignoreStateless: true}],
-  'react/no-render-return-value': ERROR,
-  'react/no-set-state': OFF, // setState is not bad.
-  'react/no-string-refs': ERROR,
-  'react/no-unknown-property': ERROR,
-  'react/prefer-es6-class': [ERROR, 'always'],
-  'react/prefer-stateless-function': ERROR,
-  'react/prop-types': ERROR,
-  'react/react-in-jsx-scope': ERROR,
-  'react/require-extension': OFF, // off because it's deprecated
-  'react/require-optimization': OFF, // optimization should be as-needed
-  'react/require-render-return': ERROR,
-  'react/self-closing-comp': WARNING,
-  'react/sort-comp': WARNING,
-  'react/sort-prop-types': [WARNING, {ignoreCase: true}],
-  'react/wrap-multilines': OFF, // deprecated
+  plugins: [
+    'react',
+  ],
+  rules: {
+    'react/display-name': ['warn', {ignoreTranspilerName: true}],
+    'react/forbid-prop-types': ['error', {forbid: ['any', 'array', 'object']}],
+    'react/jsx-boolean-value': ['error', 'never'],
+    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+    'react/jsx-curly-spacing': ['error', 'never', {allowMultiline: true}],
+    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': ['warn', {extensions: ['.js']}],
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
+    'react/jsx-handler-names': ['error', {
+      eventHandlerPrefix: '_handle',
+      eventHandlerPropPrefix: 'on',
+    }],
+    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-key': 'error',
+    'react/jsx-max-props-per-line': 'off', // max-len is enough for me
+    'react/jsx-no-bind': ['error', {ignoreRefs: true}],
+    'react/jsx-no-comment-textnodes': 'error',
+    'react/jsx-no-duplicate-props': ['error', {ignoreCase: false}],
+    'react/jsx-no-literals': 'off', // I dont like this rule.
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-undef': 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-sort-props': ['warn', {ignoreCase: true}],
+    'react/jsx-space-before-closing': [2, 'always'],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'react/jsx-wrap-multilines': 'error',
+    'react/no-danger': 'warn',
+    'react/no-deprecated': 'error',
+    'react/no-did-mount-set-state': 'off', // need setState in componentDidMount for client-side-only logic
+    'react/no-did-update-set-state': 'error',
+    'react/no-direct-mutation-state': 'error',
+    'react/no-find-dom-node': 'error',
+    'react/no-is-mounted': 'error',
+    'react/no-multi-comp': ['warn', {ignoreStateless: true}],
+    'react/no-render-return-value': 'error',
+    'react/no-set-state': 'off', // setState is not bad.
+    'react/no-string-refs': 'error',
+    'react/no-unknown-property': 'error',
+    'react/prefer-es6-class': ['error', 'always'],
+    'react/prefer-stateless-function': 'error',
+    'react/prop-types': 'error',
+    'react/react-in-jsx-scope': 'error',
+    'react/require-optimization': 'off', // optimization should be as-needed
+    'react/require-render-return': 'error',
+    'react/self-closing-comp': 'warn',
+    'react/sort-comp': 'warn',
+    'react/sort-prop-types': ['warn', {ignoreCase: true}],
+  },
 };

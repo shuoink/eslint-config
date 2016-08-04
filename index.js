@@ -1,11 +1,4 @@
-const coreRules = require('./rules/core');
-const avaRules = require('./rules/ava');
-const importRules = require('./rules/import');
-const reactRules = require('./rules/react');
-const jsxAccessibilityRules = require('./rules/jsx-a11y');
-const lodashFpRules = require('./rules/lodash-fp');
-
-const config = {
+module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 7,
@@ -17,21 +10,19 @@ const config = {
     browser: true,
     es6: true,
   },
-  plugins: [
-    'lodash-fp',
-    'ava',
-    'import',
-    'react',
-    'jsx-a11y',
-  ],
-  rules: Object.assign({},
-    coreRules,
-    avaRules,
-    importRules,
-    jsxAccessibilityRules,
-    lodashFpRules,
-    reactRules
-  ),
+  extends: [
+    './rules/ava',
+    './rules/best-practices',
+    './rules/es6',
+    './rules/import',
+    './rules/jsx-a11y',
+    './rules/lodash-fp',
+    './rules/node',
+    './rules/possible-errors',
+    './rules/react',
+    './rules/strict-mode',
+    './rules/stylistic-issues',
+    './rules/variables.js',
+  ].map(require.resolve),
+  rules: {},
 };
-
-module.exports = config;
