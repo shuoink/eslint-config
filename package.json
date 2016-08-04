@@ -1,9 +1,19 @@
 {
   "name": "@spudly/eslint-config",
   "description": "Shareable ESLint config with all the best settings.",
-  "main": "index.js",
   "author": "Stephen Sorensen <shuoink@gmail.com>",
   "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "lint": "./bin/lint.js"
+  },
+  "scripts": {
+    "postpublish": "greenkeeper-postpublish",
+    "lint": "node ./bin/lint.js index.js bin/*.js rules/*.js test/*.js",
+    "test": "npm run lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "find-rules": "eslint-find-rules --unused"
+  },
   "dependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.2.2",
@@ -11,24 +21,16 @@
     "eslint-plugin-import": "^1.11.1",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-lodash-fp": "^2.0.0",
-    "eslint-plugin-react": "^6.0.0"
+    "eslint-plugin-react": "^6.0.0",
+    "pify": "^2.3.0"
   },
   "devDependencies": {
     "eslint-find-rules": "^1.11.1",
     "greenkeeper-postpublish": "^1.0.0",
     "semantic-release": "^4.3.5"
   },
-  "scripts": {
-    "postpublish": "greenkeeper-postpublish",
-    "test": "eslint index.js rules/*.js test/*.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "find-rules": "eslint-find-rules --unused"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/spudly/eslint-config.git"
-  },
-  "eslintConfig": {
-    "extends": "./index.js"
   }
 }

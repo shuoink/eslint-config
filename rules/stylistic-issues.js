@@ -10,7 +10,7 @@ module.exports = {
     'computed-property-spacing': ['error', 'never'],
     'consistent-this': ['error', 'self'],
     'eol-last': 'error',
-    'func-names': 'warn',
+    'func-names': 'off', // forces writing the name twice. annoying!
     'func-style': 'warn',
     'id-blacklist': ['error', 'data'],
     'id-length': ['warn', {min: 1, max: 50}],
