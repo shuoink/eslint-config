@@ -14,7 +14,7 @@ module.exports = {
     'import/no-commonjs': 'off', // sometimes we need commonjs :(
     'import/no-deprecated': 'off', // jsdoc is bad. code says what. comments say why!
     'import/no-duplicates': 'error',
-    'import/no-extraneous-dependencies': ['error', {devDependencies: false, optionalDependencies: false}], // eslint-disable-line max-len
+    'import/no-extraneous-dependencies': 'error', // eslint-disable-line max-len
     'import/no-mutable-exports': 'error',
     'import/no-named-as-default-member': 'error',
     'import/no-named-as-default': 'error',
