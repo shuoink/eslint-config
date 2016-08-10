@@ -30,7 +30,8 @@ module.exports = {
     'react/jsx-space-before-closing': [2, 'always'],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': 'error',
+    'react/jsx-wrap-multilines': 'warn',
+    'react/no-comment-textnodes': 'off', // deprecated
     'react/no-danger': 'warn',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'off', // need setState in componentDidMount for client-side-only logic
@@ -47,6 +48,8 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
+    'react/require-extension': 'off', // deprecated
+    'react/wrap-multilines': 'off', // deprecated
     'react/require-optimization': 'off', // optimization should be as-needed
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'warn',

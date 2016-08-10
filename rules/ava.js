@@ -10,13 +10,16 @@ module.exports = {
     'ava/no-identical-title': 'error',
     'ava/no-ignored-test-files': 'error',
     'ava/no-invalid-end': 'error',
+    'ava/no-nested-tests': 'error',
     'ava/no-only-test': 'error',
     'ava/no-skip-assert': 'error',
     'ava/no-skip-test': 'error',
     'ava/no-statement-after-end': 'error',
+    'ava/no-todo-implementation': 'error',
     'ava/no-todo-test': 'off', // if this is enabled people will delete the todo rather than implement the test. at least this way we know theres a hole in the tests.
     'ava/no-unknown-modifiers': 'error',
-    'ava/prefer-power-assert': 'off', // 'off' until eslint-plugin-ava#118 lands and is released
+    'ava/prefer-async-await': 'warn',
+    'ava/prefer-power-assert': 'warn',
     'ava/test-ended': 'error',
     'ava/test-title': ['warn', 'always'],
     'ava/use-t-well': 'error',

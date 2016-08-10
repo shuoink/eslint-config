@@ -24,7 +24,11 @@ export class Amet extends React.Component {
   }
 
   render() {
-    return <div className={this._getClassName} />;
+    return (
+      <div className={this._getClassName}>
+        Lorem ipsum dolor...
+      </div>
+    );
   }
 }
 
