@@ -15,7 +15,7 @@
     "find-rules": "eslint-find-rules --unused"
   },
   "dependencies": {
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^7.0.0",
     "eslint": "^3.2.2",
     "eslint-plugin-ava": "^3.0.0",
     "eslint-plugin-import": "^2.0.1",
