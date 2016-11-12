@@ -4,6 +4,7 @@ module.exports = {
   ],
   rules: {
     'react/display-name': ['warn', {ignoreTranspilerName: true}],
+    'react/forbid-component-props': 'off', // dont want to forbid className or style attributes
     'react/forbid-prop-types': ['error', {forbid: ['any', 'array', 'object']}],
     'react/jsx-boolean-value': ['error', 'never'],
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
@@ -15,8 +16,8 @@ module.exports = {
       eventHandlerPrefix: '_handle',
       eventHandlerPropPrefix: 'on',
     }],
-    'react/jsx-indent-props': ['error', 2],
     'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', 2],
     'react/jsx-key': 'error',
     'react/jsx-max-props-per-line': 'off', // max-len is enough for me
     'react/jsx-no-bind': ['error', {ignoreRefs: true}],
@@ -31,8 +32,10 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'warn',
+    'react/no-children-prop': 'error',
     'react/no-comment-textnodes': 'off', // deprecated
     'react/no-danger': 'warn',
+    'react/no-danger-with-children': 'error',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'off', // need setState in componentDidMount for client-side-only logic
     'react/no-did-update-set-state': 'error',
@@ -43,17 +46,20 @@ module.exports = {
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'off', // setState is not bad.
     'react/no-string-refs': 'error',
+    'react/no-unescaped-entities': 'warn',
     'react/no-unknown-property': 'error',
+    'react/no-unused-prop-types': 'warn',
     'react/prefer-es6-class': ['error', 'always'],
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/require-extension': 'off', // deprecated
-    'react/wrap-multilines': 'off', // deprecated
     'react/require-optimization': 'off', // optimization should be as-needed
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'warn',
     'react/sort-comp': 'warn',
     'react/sort-prop-types': ['warn', {ignoreCase: true}],
+    'react/style-prop-object': 'error',
+    'react/wrap-multilines': 'off', // deprecated
   },
 };

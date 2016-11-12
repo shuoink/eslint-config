@@ -13,25 +13,4 @@ if (lorem) {
   }
 }
 
-const React = {};
-
-export class Amet extends React.Component {
-
-  static displayName = 'Amet';
-
-  _getClassName() {
-    return 'consecutor';
-  }
-
-  render() {
-    return (
-      <div className={this._getClassName}>
-        Lorem ipsum dolor...
-      </div>
-    );
-  }
-}
-
-export const Adipiscing = () => <div />;
-
-Adipiscing.displayName = 'Adipiscing';
+module.exports = lorem;

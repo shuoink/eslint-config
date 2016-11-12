@@ -4,12 +4,9 @@
   "author": "Stephen Sorensen <shuoink@gmail.com>",
   "license": "MIT",
   "main": "index.js",
-  "bin": {
-    "lint": "./bin/lint.js"
-  },
   "scripts": {
     "postpublish": "greenkeeper-postpublish",
-    "lint": "node ./bin/lint.js index.js bin/*.js rules/*.js test/*.js",
+    "lint": "eslint index.js rules test",
     "test": "npm run lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "find-rules": "eslint-find-rules --unused"
@@ -17,7 +14,6 @@
   "dependencies": {
     "babel-eslint": "^7.0.0",
     "eslint": "^3.2.2",
-    "eslint-plugin-ava": "^4.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-lodash-fp": "^2.0.0",
@@ -32,5 +28,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/spudly/eslint-config.git"
+  },
+  "eslintConfig": {
+    "extends": "./index.js",
+    "parserOptions": {
+      "sourceType": "script"
+    }
   }
 }

@@ -1,17 +1,10 @@
 module.exports = {
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 7,
-    sourceType: 'module',
-    ecmaFeatures: {jsx: true},
-  },
   env: {
-    node: true,
     browser: true,
     es6: true,
+    node: true,
   },
   extends: [
-    './rules/ava',
     './rules/best-practices',
     './rules/es6',
     './rules/import',
@@ -24,5 +17,11 @@ module.exports = {
     './rules/stylistic-issues',
     './rules/variables.js',
   ].map(require.resolve),
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {jsx: true},
+    ecmaVersion: 7,
+    sourceType: 'module',
+  },
   rules: {},
 };
