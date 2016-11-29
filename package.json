@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint-find-rules": "^1.11.1",
     "greenkeeper-postpublish": "^1.0.0",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^6.3.2"
   },
   "repository": {
     "type": "git",
