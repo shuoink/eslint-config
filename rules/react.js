@@ -29,9 +29,11 @@ module.exports = {
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': ['warn', {ignoreCase: true}],
     'react/jsx-space-before-closing': [2, 'always'],
+    'react/jsx-tag-spacing': 'warn',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'warn',
+    'react/no-array-index-key': 'warn',
     'react/no-children-prop': 'error',
     'react/no-comment-textnodes': 'off', // deprecated
     'react/no-danger': 'warn',
@@ -53,6 +55,7 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
+    'react/require-default-props': 'warn',
     'react/require-extension': 'off', // deprecated
     'react/require-optimization': 'off', // optimization should be as-needed
     'react/require-render-return': 'error',

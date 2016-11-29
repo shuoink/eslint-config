@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    'no-await-in-loop': 'off', // i await in loops intentionally sometimes
     'no-cond-assign': ['error', 'always'],
     'no-console': 'warn',
     'no-constant-condition': 'warn',

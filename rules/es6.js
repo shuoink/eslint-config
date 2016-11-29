@@ -20,6 +20,7 @@ module.exports = {
     'object-shorthand': 'warn',
     'prefer-arrow-callback': 'warn',
     'prefer-const': ['warn', {ignoreReadBeforeAssign: true}],
+    'prefer-destructuring': 'warn',
     'prefer-numeric-literals': ['warn'],
     'prefer-reflect': 'warn',
     'prefer-rest-params': 'warn',

@@ -4,6 +4,7 @@ module.exports = {
     'block-spacing': ['warn', 'always'],
     'brace-style': ['warn', '1tbs', {allowSingleLine: true}],
     camelcase: ['warn', {properties: 'never'}],
+    'capitalized-comments': 'off', // terrible idea to enforce case on comments!
     'comma-dangle': ['warn', 'always-multiline'],
     'comma-spacing': ['warn', {after: true, before: false}],
     'comma-style': ['warn', 'last'],
@@ -45,6 +46,7 @@ module.exports = {
     'no-lonely-if': 'warn',
     'no-mixed-operators': 'warn',
     'no-mixed-spaces-and-tabs': 'warn',
+    'no-multi-assign': 'off', // i like multi-assign syntax :p
     'no-multiple-empty-lines': ['warn', {max: 2, maxEOF: 1}],
     'no-negated-condition': 'warn',
     'no-nested-ternary': 'warn',
@@ -79,6 +81,7 @@ module.exports = {
     'space-infix-ops': 'warn',
     'space-unary-ops': 'warn',
     'spaced-comment': ['warn', 'always'],
+    'template-tag-spacing': ['warn', 'never'],
     'unicode-bom': ['warn', 'never'],
     'wrap-regex': 'off', // wrapping regexes in parens is unnecessary
   },
