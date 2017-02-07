@@ -30,7 +30,7 @@ module.exports = {
     'max-len': ['warn', {code: 100, ignoreTrailingComments: true, tabWidth: 2}],
     'max-lines': ['warn', {max: 200, skipBlankLines: false, skipComments: false}],
     'max-nested-callbacks': ['warn', 2],
-    'max-params': ['warn', 3],
+    'max-params': ['warn', 5],
     'max-statements': ['warn', 10],
     'max-statements-per-line': ['warn', {max: 1}],
     'multiline-ternary': 'off', // 'off' because some should be multiline, others single
