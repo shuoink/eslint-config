@@ -1,4 +1,4 @@
-/* eslint-disable max-len, max-lines */
+/* eslint-disable max-lines */
 module.exports = {
   env: {
     browser: true,
@@ -12,12 +12,7 @@ module.exports = {
     ecmaVersion: 7,
     sourceType: 'module',
   },
-  plugins: [
-    'import',
-    'jsx-a11y',
-    'react',
-    'lodash-fp',
-  ],
+  plugins: ['import', 'jsx-a11y', 'react', 'lodash-fp'],
   rules: {
     'accessor-pairs': 'warn',
     'array-bracket-spacing': ['warn', 'never'],
@@ -321,7 +316,10 @@ module.exports = {
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': ['warn', {extensions: ['.js']}],
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
-    'react/jsx-handler-names': ['error', {eventHandlerPrefix: '_handle', eventHandlerPropPrefix: 'on'}],
+    'react/jsx-handler-names': [
+      'error',
+      {eventHandlerPrefix: '_handle', eventHandlerPropPrefix: 'on'},
+    ],
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-key': 'error',
@@ -338,7 +336,14 @@ module.exports = {
     'react/jsx-tag-spacing': 'warn',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': 'warn',
+    'react/jsx-wrap-multilines': [
+      'error',
+      {
+        assignment: false,
+        declaration: false,
+        return: true,
+      },
+    ],
     'react/no-array-index-key': 'warn',
     'react/no-children-prop': 'error',
     'react/no-comment-textnodes': 'off', // deprecated
@@ -366,7 +371,41 @@ module.exports = {
     'react/require-optimization': 'off', // optimization should be as-needed
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'warn',
-    'react/sort-comp': 'warn',
+    'react/sort-comp': [
+      'warn',
+      {
+        groups: {
+          lifecycle: [
+            'displayName',
+            'propTypes',
+            'contextTypes',
+            'childContextTypes',
+            'statics',
+            'defaultProps',
+            'constructor',
+            'getDefaultProps',
+            'getInitialState',
+            'state',
+            'getChildContext',
+            'componentWillMount',
+            'componentDidMount',
+            'componentWillReceiveProps',
+            'shouldComponentUpdate',
+            'componentWillUpdate',
+            'componentDidUpdate',
+            'componentWillUnmount',
+          ],
+        },
+        order: [
+          'static-methods',
+          'lifecycle',
+          'render',
+          '^_render.+/',
+          'everything-else',
+          '/^_handle.+/',
+        ],
+      },
+    ],
     'react/sort-prop-types': ['warn', {ignoreCase: true}],
     'react/style-prop-object': 'error',
     'react/wrap-multilines': 'off', // deprecated
