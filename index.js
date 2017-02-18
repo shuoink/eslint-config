@@ -88,7 +88,7 @@ module.exports = {
     'import/prefer-default-export': 'error',
     'import/unambiguous': 'error',
     indent: ['warn', 2, {SwitchCase: 1}],
-    'init-declarations': 'error',
+    'init-declarations': 'off',
     'jsx-a11y/accessible-emoji': 'warn',
     'jsx-a11y/anchor-has-content': 'warn',
     'jsx-a11y/aria-activedescendant-has-tabindex': 'warn',
@@ -333,7 +333,7 @@ module.exports = {
     'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
     'react/jsx-pascal-case': 'error',
-    'react/jsx-sort-props': ['warn', {ignoreCase: true}],
+    'react/jsx-sort-props': ['off'], // no. just no.
     'react/jsx-space-before-closing': [2, 'always'],
     'react/jsx-tag-spacing': 'warn',
     'react/jsx-uses-react': 'error',
