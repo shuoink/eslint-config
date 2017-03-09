@@ -4,13 +4,13 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
-    node: true,
+    node: true
   },
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {jsx: true},
     ecmaVersion: 7,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['import', 'jsx-a11y', 'react', 'lodash-fp'],
   rules: {
@@ -23,11 +23,11 @@ module.exports = {
     'block-scoped-var': 'error',
     'block-spacing': ['warn', 'always'],
     'brace-style': ['warn', '1tbs', {allowSingleLine: true}],
-    'callback-return': 'error',
+    'callback-return': 'off', // conflicts with no-useless-return
     camelcase: ['warn', {properties: 'never'}],
     'capitalized-comments': 'off', // terrible idea to enforce case on comments!
     'class-methods-use-this': 'warn',
-    'comma-dangle': ['warn', 'always-multiline'],
+    'comma-dangle': 'off', // handled by prettier
     'comma-spacing': ['warn', {after: true, before: false}],
     'comma-style': ['warn', 'last'],
     complexity: ['warn', 11],
@@ -59,7 +59,7 @@ module.exports = {
     'import/imports-first': 'off', // deprecated
     'import/max-dependencies': 'warn',
     'import/named': 'error',
-    'import/namespace': 'error',
+    'import/namespace': ['error', {allowComputed: true}],
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
     'import/no-amd': 'error',
@@ -318,7 +318,7 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-handler-names': [
       'error',
-      {eventHandlerPrefix: '_handle', eventHandlerPropPrefix: 'on'},
+      {eventHandlerPrefix: '_handle', eventHandlerPropPrefix: 'on'}
     ],
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
@@ -341,8 +341,8 @@ module.exports = {
       {
         assignment: false,
         declaration: false,
-        return: true,
-      },
+        return: true
+      }
     ],
     'react/no-array-index-key': 'warn',
     'react/no-children-prop': 'error',
@@ -393,8 +393,8 @@ module.exports = {
             'shouldComponentUpdate',
             'componentWillUpdate',
             'componentDidUpdate',
-            'componentWillUnmount',
-          ],
+            'componentWillUnmount'
+          ]
         },
         order: [
           'static-methods',
@@ -402,9 +402,9 @@ module.exports = {
           'render',
           '^_render.+/',
           'everything-else',
-          '/^_handle.+/',
-        ],
-      },
+          '/^_handle.+/'
+        ]
+      }
     ],
     'react/sort-prop-types': ['warn', {ignoreCase: true}],
     'react/style-prop-object': 'error',
@@ -416,7 +416,7 @@ module.exports = {
     semi: ['warn', 'always'],
     'semi-spacing': ['warn', {after: true, before: false}],
     'sort-imports': 'off', // this is too annoying to be enabled
-    'sort-keys': ['warn', 'asc', {caseSensitive: false, natural: true}],
+    'sort-keys': 'off', // gets annoying after a while
     'sort-vars': 'warn',
     'space-before-blocks': 'warn',
     'space-before-function-paren': ['warn', 'never'],
@@ -436,6 +436,6 @@ module.exports = {
     'wrap-iife': ['error', 'outside'],
     'wrap-regex': 'off', // wrapping regexes in parens is unnecessary
     'yield-star-spacing': ['warn', 'after'],
-    yoda: ['error'],
-  },
+    yoda: ['error']
+  }
 };
