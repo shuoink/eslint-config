@@ -23,7 +23,7 @@
     "eslint-plugin-react": "^7.0.1"
   },
   "devDependencies": {
-    "eslint-find-rules": "^1.14.3",
+    "eslint-find-rules": "^2.0.0",
     "greenkeeper-postpublish": "^1.0.1",
     "husky": "^0.13.2",
     "lint-staged": "^3.3.1",
