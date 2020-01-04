@@ -1,0 +1,44 @@
+{
+  "name": "@spudly/eslint-config",
+  "version": "0.1.0",
+  "description": "Shareable ESLint config",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facebook/create-react-app/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "confusing-browser-globals": "^1.0.9",
+    "eslint": "6.x",
+    "eslint-plugin-flowtype": "^4.5.3",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0"
+  },
+  "repository": "https://github.com/spudly/eslint-config",
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --fix && pretty-quick --staged"
+    }
+  },
+  "author": "Stephen John Sorensen <shuoink@gmail.com>",
+  "sideEffects": false
+}
