@@ -28,7 +28,7 @@
   "repository": "https://github.com/spudly/eslint-config",
   "devDependencies": {
     "eslint-find-rules": "^3.4.0",
-    "husky": "^3.1.0",
+    "husky": "^4.0.9",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
