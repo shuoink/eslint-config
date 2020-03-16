@@ -10,7 +10,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
     "confusing-browser-globals": "^1.0.9",
