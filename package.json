@@ -19,11 +19,14 @@
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "^2.3.0"
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "snyk": "^1.317.0"
   },
   "scripts": {
     "lint": "eslint . --max-warnings=0",
-    "unused": "eslint-find-rules --unused"
+    "unused": "eslint-find-rules --unused",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "https://github.com/spudly/eslint-config",
   "devDependencies": {
@@ -42,5 +45,6 @@
     }
   },
   "author": "Stephen John Sorensen <shuoink@gmail.com>",
-  "sideEffects": false
+  "sideEffects": false,
+  "snyk": true
 }
