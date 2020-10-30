@@ -1,3 +1,3 @@
-# @spudlt/eslint-config
+# @spudly/eslint-config
 
 A shareable ESLint config.
