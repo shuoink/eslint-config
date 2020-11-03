@@ -1,3 +1,4 @@
+/* eslint sort-keys: ['warn', 'asc', {natural: true}] */
 const restrictedGlobals = require("confusing-browser-globals");
 
 module.exports = {
@@ -59,6 +60,18 @@ module.exports = {
         "no-useless-constructor": "off",
       },
     },
+    {
+      env: {
+        mocha: true,
+      },
+      files: ["**/cypress/**/*.{spec,test}.*"],
+      globals: {
+        cy: "readonly",
+      },
+      rules: {
+        "no-unused-expressions": "off",
+      },
+    },
   ],
   parser: "babel-eslint",
   parserOptions: {
@@ -88,7 +101,7 @@ module.exports = {
     "comma-dangle": "off",
     "comma-spacing": "off",
     "comma-style": "off",
-    complexity: "warn",
+    complexity: "off",
     "computed-property-spacing": "off",
     "consistent-return": "warn",
     "consistent-this": "warn",
@@ -154,7 +167,7 @@ module.exports = {
     "import/no-restricted-paths": "off",
     "import/no-self-import": "error",
     "import/no-unassigned-import": "off",
-    "import/no-unresolved": "error",
+    "import/no-unresolved": ["error", { commonjs: true }],
     "import/no-unused-modules": "warn",
     "import/no-useless-path-segments": "warn",
     "import/no-webpack-loader-syntax": "error",
@@ -270,10 +283,10 @@ module.exports = {
     "max-depth": "warn",
     "max-len": "off",
     "max-lines": "off",
-    "max-lines-per-function": ["warn", 40],
+    "max-lines-per-function": "off",
     "max-nested-callbacks": ["warn", 3],
-    "max-params": ["warn", 3],
-    "max-statements": "warn",
+    "max-params": ["warn", 5],
+    "max-statements": "off",
     "max-statements-per-line": "warn",
     "multiline-comment-style": "off",
     "multiline-ternary": "off",
@@ -541,13 +554,7 @@ module.exports = {
     "react/jsx-curly-newline": "off",
     "react/jsx-curly-spacing": "off",
     "react/jsx-equals-spacing": "off",
-    "react/jsx-filename-extension": [
-      "error",
-      {
-        allow: "as-needed",
-        extensions: [".tsx"],
-      },
-    ],
+    "react/jsx-filename-extension": "off",
     "react/jsx-first-prop-new-line": "off",
     "react/jsx-fragments": "warn",
     "react/jsx-handler-names": "off",
@@ -563,7 +570,7 @@ module.exports = {
     "react/jsx-no-script-url": "error",
     "react/jsx-no-target-blank": "warn",
     "react/jsx-no-undef": "error",
-    "react/jsx-no-useless-fragment": "warn",
+    "react/jsx-no-useless-fragment": "off", // conflicts with React.FC type
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-pascal-case": [
       "warn",
@@ -592,7 +599,7 @@ module.exports = {
     "react/no-direct-mutation-state": "warn",
     "react/no-find-dom-node": "error",
     "react/no-is-mounted": "warn",
-    "react/no-multi-comp": "off",
+    "react/no-multi-comp": "warn",
     "react/no-redundant-should-component-update": "error",
     "react/no-render-return-value": "error",
     "react/no-set-state": "off",
@@ -643,7 +650,7 @@ module.exports = {
     "semi-style": "off",
     "sort-imports": "off",
     "sort-keys": [
-      "warn",
+      "off",
       "asc",
       {
         natural: true,
@@ -671,6 +678,12 @@ module.exports = {
     yoda: ["warn", "never"],
   },
   settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
     react: {
       version: "detect",
     },
