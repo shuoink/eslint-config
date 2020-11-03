@@ -24,7 +24,7 @@
   },
   "scripts": {
     "lint": "eslint . --max-warnings=0",
-    "unused": "eslint-find-rules --unused",
+    "unused": "eslint-find-rules --unused ./index.js",
     "deprecated": "eslint-find-rules --deprecated",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
