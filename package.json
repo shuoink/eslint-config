@@ -10,42 +10,40 @@
     "index.js"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
     "babel-eslint": "^10.1.0",
     "confusing-browser-globals": "^1.0.10",
-    "eslint": "^7.13.0",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-flowtype": "^6.1.0",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "snyk": "^1.425.4"
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "snyk": "^1.729.0"
   },
   "scripts": {
     "lint": "eslint . --max-warnings=0",
     "unused": "eslint-find-rules --unused ./index.js",
     "deprecated": "eslint-find-rules --deprecated",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect && husky install"
   },
   "repository": "https://github.com/spudly/eslint-config",
   "devDependencies": {
+    "@types/confusing-browser-globals": "^1.0.0",
     "eslint-find-rules": "^3.6.1",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.1.2",
-    "pretty-quick": "^3.1.0"
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.4.3"
   },
   "eslintConfig": {
     "extends": "./index.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint -- --fix && pretty-quick --staged"
-    }
-  },
-  "author": "Stephen John Sorensen <shuoink@gmail.com>",
+  "author": "Stephen Sorensen <shuoink@gmail.com>",
   "sideEffects": false,
   "snyk": true
 }
