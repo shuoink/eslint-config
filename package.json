@@ -3,9 +3,6 @@
   "version": "8.0.0",
   "description": "Shareable ESLint config",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
-  },
   "files": [
     "index.js"
   ],
@@ -21,6 +18,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sonarjs": "^0.10.0",
+    "eslint-plugin-unicorn": "^36.0.0",
     "snyk": "^1.729.0"
   },
   "scripts": {
@@ -29,6 +27,9 @@
     "deprecated": "eslint-find-rules --deprecated",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect && husky install"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   },
   "repository": "https://github.com/spudly/eslint-config",
   "devDependencies": {
