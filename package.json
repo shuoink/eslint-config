@@ -29,19 +29,26 @@
     "unused": "eslint-find-rules --unused ./index.js",
     "deprecated": "eslint-find-rules --deprecated",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect && husky install"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": "eslint --fix"
   },
   "repository": "https://github.com/spudly/eslint-config",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^8.0.1",
+    "@semantic-release/npm": "^8.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "@types/confusing-browser-globals": "^1.0.0",
     "eslint-find-rules": "^3.6.1",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
+    "semantic-release": "^18.0.0",
     "typescript": "^4.4.3"
   },
   "eslintConfig": {
@@ -49,5 +56,39 @@
   },
   "author": "Stephen Sorensen <shuoink@gmail.com>",
   "sideEffects": false,
-  "snyk": true
+  "snyk": true,
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog\n\nAll notable changes to this project will be documented in this file. See\n[Conventional Commits](https://conventionalcommits.org) for commit guidelines."
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "tarballDir": "pack"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "pack/*.tgz"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "quoteProps": "consistent"
+  }
 }
