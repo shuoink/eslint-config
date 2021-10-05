@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/spudly/eslint-config/compare/v10.0.0...v10.0.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* **rules:** disable problematic eslint rules ([aa51e77](https://github.com/spudly/eslint-config/commit/aa51e77029d74c28bc4755e52188be799f8d8d14))
+
 # [10.0.0](https://github.com/spudly/eslint-config/compare/v9.0.0...v10.0.0) (2021-10-04)
 
 
