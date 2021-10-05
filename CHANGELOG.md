@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/spudly/eslint-config/compare/v9.0.0...v10.0.0) (2021-10-04)
+
+
+### chore
+
+* **release:** force release ([da0acf2](https://github.com/spudly/eslint-config/commit/da0acf2fc2abc0ef2e3cae496b3788beefec928e))
+
+
+### BREAKING CHANGES
+
+* **release:** force major release
+
 # [9.0.0](https://github.com/spudly/eslint-config/compare/v8.0.0...v9.0.0) (2021-10-04)
 
 
