@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.4](https://github.com/spudly/eslint-config/compare/v10.0.3...v10.0.4) (2021-11-01)
+
+
+### Bug Fixes
+
+* **ts:** only use typescript rules in typescript files ([a224688](https://github.com/spudly/eslint-config/commit/a22468869096d622bac424e2c3a3ac171e38388a))
+
 ## [10.0.3](https://github.com/spudly/eslint-config/compare/v10.0.2...v10.0.3) (2021-10-08)
 
 
