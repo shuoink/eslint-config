@@ -939,7 +939,6 @@ module.exports = {
     "wrap-regex": "off",
     "yield-star-spacing": "off",
     "yoda": ["error", "never"],
-
     "github/array-foreach": "off",
     "github/async-currenttarget": "error",
     "github/async-preventdefault": "error",
