@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/spudly/eslint-config/compare/v10.0.5...v11.0.0) (2021-11-02)
+
+
+### Bug Fixes
+
+* **ts:** allow abbreviations ([700cc85](https://github.com/spudly/eslint-config/commit/700cc855844082e2787d26d6f5b51d8beedae293))
+
+
+### Features
+
+* **comments:** add new rules for cleaning up eslint comments ([b12ef51](https://github.com/spudly/eslint-config/commit/b12ef51a521c61b0b195d1beecd437f57d6079d6))
+
+
+### BREAKING CHANGES
+
+* **comments:** new rules
+
 ## [10.0.5](https://github.com/spudly/eslint-config/compare/v10.0.4...v10.0.5) (2021-11-02)
 
 
