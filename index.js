@@ -16,7 +16,7 @@ module.exports = {
     project: "./tsconfig.json",
     sourceType: "module",
     warnOnUnsupportedTypeScriptVersion: true,
-    extraFileExtensions: [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"],
+    extraFileExtensions: [".cjs", ".mjs"],
   },
   plugins: [
     "@typescript-eslint",
@@ -84,7 +84,7 @@ module.exports = {
     "eslint-comments/no-unlimited-disable": "warn",
     "eslint-comments/no-unused-disable": "warn",
     "eslint-comments/no-unused-enable": "warn",
-    "eslint-comments/no-use": "warn",
+    "eslint-comments/no-use": "off", // allow directive comments
     "eslint-comments/require-description": "warn",
     "for-direction": "error",
     "func-call-spacing": "off",
@@ -869,7 +869,7 @@ module.exports = {
     "node/no-sync": "error",
     "node/no-unpublished-bin": "error",
     "node/no-unpublished-import": "off",
-    "node/no-unpublished-require": "error",
+    "node/no-unpublished-require": "off",
     "node/no-unsupported-features/es-builtins": "error",
     "node/no-unsupported-features/es-syntax": "off",
     "node/no-unsupported-features/node-builtins": "error",
