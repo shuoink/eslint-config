@@ -1,6 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
-/* eslint-disable @typescript-eslint/no-var-requires */
-// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 const restrictedGlobals = require("confusing-browser-globals");
 
 module.exports = {
@@ -32,6 +29,7 @@ module.exports = {
     "react",
     "sonarjs",
     "unicorn",
+    "eslint-comments",
   ],
   root: true,
   settings: {
@@ -79,6 +77,15 @@ module.exports = {
     "dot-notation": "error",
     "eol-last": "off",
     "eqeqeq": ["error", "smart"],
+    "eslint-comments/disable-enable-pair": "warn",
+    "eslint-comments/no-aggregating-enable": "warn",
+    "eslint-comments/no-duplicate-disable": "warn",
+    "eslint-comments/no-restricted-disable": "warn",
+    "eslint-comments/no-unlimited-disable": "warn",
+    "eslint-comments/no-unused-disable": "warn",
+    "eslint-comments/no-unused-enable": "warn",
+    "eslint-comments/no-use": "warn",
+    "eslint-comments/require-description": "warn",
     "for-direction": "error",
     "func-call-spacing": "off",
     "func-name-matching": "error",
@@ -730,7 +737,7 @@ module.exports = {
     "unicorn/prefer-keyboard-event-key": "error",
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
-    "unicorn/prefer-module": "warn",
+    "unicorn/prefer-module": "off", // can't module all the things yet. maybe someday
     "unicorn/prefer-negative-index": "error",
     "unicorn/prefer-node-protocol": "off",
     "unicorn/prefer-number-properties": "error",
