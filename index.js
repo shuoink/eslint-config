@@ -751,20 +751,7 @@ module.exports = {
     "unicorn/prefer-ternary": "error",
     "unicorn/prefer-top-level-await": "off",
     "unicorn/prefer-type-error": "error",
-    "unicorn/prevent-abbreviations": [
-      "error",
-      {
-        allowList: {
-          props: true,
-          ref: true,
-          refs: true,
-          getInitialProps: true,
-          getStaticProps: true,
-          e: true, // event handlers
-          i: true,
-        },
-      },
-    ],
+    "unicorn/prevent-abbreviations": "off", // good idea in theory but in practice, abbreviations are good. there's a middle ground and this rule is too restrictive.
     "unicorn/require-array-join-separator": "error",
     "unicorn/require-number-to-fixed-digits-argument": "error",
     "unicorn/require-post-message-target-origin": "error",
