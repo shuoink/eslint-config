@@ -19,6 +19,7 @@ module.exports = {
     project: "./tsconfig.json",
     sourceType: "module",
     warnOnUnsupportedTypeScriptVersion: true,
+    extraFileExtensions: [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"],
   },
   plugins: [
     "@typescript-eslint",
