@@ -1,6 +1,6 @@
 {
   "name": "@shuoink/eslint-config",
-  "version": "11.0.1",
+  "version": "12.0.0",
   "description": "Shareable ESLint config",
   "repository": "https://github.com/spudly/eslint-config",
   "license": "ISC",

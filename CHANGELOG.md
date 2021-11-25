@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/spudly/eslint-config/compare/v11.0.1...v12.0.0) (2021-11-25)
+
+
+### Features
+
+* **deps:** upgrade dependencies, add new rules ([e76c003](https://github.com/spudly/eslint-config/commit/e76c003a38f30871b50280faa091f50b24f80525))
+
+
+### BREAKING CHANGES
+
+* **deps:** eslint v8, new rules
+
 ## [11.0.1](https://github.com/spudly/eslint-config/compare/v11.0.0...v11.0.1) (2021-11-02)
 
 
