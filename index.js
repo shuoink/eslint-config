@@ -843,7 +843,7 @@ module.exports = {
     "github/unescaped-html-literal": "off",
     "jsdoc/check-access": "error",
     "jsdoc/check-alignment": "error",
-    "jsdoc/check-examples": "error",
+    "jsdoc/check-examples": "off", // https://github.com/eslint/eslint/issues/14745
     "jsdoc/check-indentation": "error",
     "jsdoc/check-line-alignment": "error",
     "jsdoc/check-param-names": "error",
