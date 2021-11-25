@@ -2,62 +2,30 @@
   "name": "@shuoink/eslint-config",
   "version": "11.0.1",
   "description": "Shareable ESLint config",
+  "repository": "https://github.com/spudly/eslint-config",
   "license": "ISC",
+  "author": "Stephen Sorensen <shuoink@gmail.com>",
+  "sideEffects": false,
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
-    "babel-eslint": "^10.1.0",
-    "confusing-browser-globals": "^1.0.10",
-    "eslint": "^7.32.0",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-flowtype": "^6.1.0",
-    "eslint-plugin-github": "4.3.2",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsdoc": "^36.1.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-sonarjs": "^0.10.0",
-    "eslint-plugin-unicorn": "^36.0.0",
-    "snyk": "^1.729.0"
-  },
   "scripts": {
-    "lint": "eslint . --max-warnings=0",
-    "unused": "eslint-find-rules --unused ./index.js",
     "deprecated": "eslint-find-rules --deprecated",
+    "lint": "eslint . --max-warnings=0",
+    "prepare": "husky install",
     "snyk-protect": "snyk protect",
-    "prepare": "husky install"
+    "unused": "eslint-find-rules --unused ./index.js"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.js": "eslint --fix",
+    "package.json": "sort-package-json"
   },
-  "repository": "https://github.com/spudly/eslint-config",
-  "devDependencies": {
-    "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/commit-analyzer": "^9.0.1",
-    "@semantic-release/git": "^10.0.0",
-    "@semantic-release/github": "^8.0.1",
-    "@semantic-release/npm": "^8.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.2",
-    "@types/confusing-browser-globals": "^1.0.0",
-    "eslint-find-rules": "^3.6.1",
-    "husky": "^7.0.0",
-    "lint-staged": "^11.1.2",
-    "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1",
-    "semantic-release": "^18.0.0",
-    "typescript": "^4.4.3"
+  "prettier": {
+    "quoteProps": "consistent"
   },
   "eslintConfig": {
     "extends": "./index.js"
   },
-  "author": "Stephen Sorensen <shuoink@gmail.com>",
-  "sideEffects": false,
-  "snyk": true,
   "release": {
     "branch": "master",
     "plugins": [
@@ -89,10 +57,43 @@
       ]
     ]
   },
-  "prettier": {
-    "quoteProps": "consistent"
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "babel-eslint": "^10.1.0",
+    "confusing-browser-globals": "^1.0.10",
+    "eslint": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-github": "^4.3.5",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsdoc": "^37.0.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "snyk": "^1.773.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/confusing-browser-globals": "^1.0.0",
+    "eslint-find-rules": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.2",
+    "semantic-release": "^18.0.1",
+    "sort-package-json": "^1.53.1",
+    "typescript": "^4.5.2"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
