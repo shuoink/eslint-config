@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.1](https://github.com/spudly/eslint-config/compare/v12.0.0...v12.0.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **rule:** disable jsdoc/check-examples ([03f2eea](https://github.com/spudly/eslint-config/commit/03f2eea7baf51ccc45249453f06ebaf3b7fc192d))
+
 # [12.0.0](https://github.com/spudly/eslint-config/compare/v11.0.1...v12.0.0) (2021-11-25)
 
 
