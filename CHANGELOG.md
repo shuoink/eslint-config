@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/spudly/eslint-config/compare/v12.0.1...v13.0.0) (2021-12-01)
+
+
+### Features
+
+* **plugins:** drop eslint-plugin-flowtype, add eslint-plugin-storybook ([117cc6a](https://github.com/spudly/eslint-config/commit/117cc6a999d0edd72572df7e638aff44796efbdd))
+
+
+### BREAKING CHANGES
+
+* **plugins:** added eslint-plugin-storybook
+
 ## [12.0.1](https://github.com/spudly/eslint-config/compare/v12.0.0...v12.0.1) (2021-11-25)
 
 
